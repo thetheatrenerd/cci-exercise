@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Happy Page Title Goes Here</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto; font-family: Tahoma, Verdana, Arial, sans-serif; }
+#but-wait-theres-more { font-size: 12px; font-style: italic; }
+</style>
+</head>
+<body>
+
+<p id="uh-oh">There's a button right below this text. Don't click it. Don't... oh no...</p>
+
+<p><button id="clicky" onclick="changeTheThings()">I said don't click!</button></p>
+
+<p id="but-wait-theres-more">P.S.: You may have noticed...</p>
+
+<script>
+function changeTheThings() {
+  var mainText = document.getElementById("uh-oh");
+  var otherText = document.getElementById("but-wait-theres-more");
+  var buttonText = document.getElementById("clicky");
+  
+  if (mainText.innerHTML === "There's a button right below this text. Don't click it. Don't... oh no...") {
+    mainText.innerHTML = "YOU CLICKED THE BUTTON HOW COULD YOU";
+  } else {
+    mainText.innerHTML = "There's a button right below this text. Don't click it. Don't... oh no...";
+  }
+  
+  if (otherText.innerHTML === "P.S.: You may have noticed...") {
+    otherText.innerHTML = "...that this looks a bit like the nginx welcome page. You'd be absolutely right!";
+  } else {
+    otherText.innerHTML = "P.S.: You may have noticed...";
+  }
+  
+  if (buttonText.innerHTML === "I said don't click!") {
+    buttonText.innerHTML = "Welp. I guess you might as well click again.";
+  } else {
+    buttonText.innerHTML = "I said don't click!";
+  }
+}
+</script>
+
+</body>
+</html>
