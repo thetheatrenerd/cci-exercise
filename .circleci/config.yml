@@ -26,7 +26,6 @@ jobs:
       - checkout
       - run:
           command: |
-            scp -r -o StrictHostKeyChecking=no ./ ubuntu@ec2-3-21-58-106.us-east-2.compute.amazonaws.com:/home/ubuntu/cci-exercise/
             ssh -o StrictHostKeyChecking=no ubuntu@ec2-3-21-58-106.us-east-2.compute.amazonaws.com "./deploy.sh"
 
 workflows:
