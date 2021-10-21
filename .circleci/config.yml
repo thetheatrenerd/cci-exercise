@@ -16,7 +16,7 @@ jobs:
             sudo pip install pytest
       - run:
           command: python tests/test_selenium.py
-   deploy:
+  deploy:
     docker:
       - image: circleci/python:3.6.4
     steps:
