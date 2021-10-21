@@ -20,6 +20,9 @@ jobs:
     docker:
       - image: circleci/python:3.6.4
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:i63uYyUJEKnKvrjsbfJilufwrvji1zecAldw1QNzKQY jennicaprice@gmail.com"
       - checkout
       - run:
           command: |
