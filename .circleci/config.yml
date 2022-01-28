@@ -6,6 +6,7 @@ jobs:
       - image: circleci/python:3.6.4
     steps:
       - checkout
+      - run: echo $THE_PASSWORD
       - run: mkdir test-reports
       - run:
           command: |
@@ -31,7 +32,9 @@ jobs:
 workflows:
   click-and-check-workflow:
     jobs:
-      - click-and-check
+      - click-and-check:
+            context:
+                - "Secret Things"
       - deploy:
             requires:
                 - click-and-check
