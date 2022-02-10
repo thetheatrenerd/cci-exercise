@@ -34,6 +34,8 @@ workflows:
                 - "Secret Things"
       - hold:
             type: approval
-      - deploy:
             requires:
                 - click-and-check
+      - deploy:
+            requires:
+                - hold
