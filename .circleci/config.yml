@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  heroku: circleci/heroku@0.0.10
+
 jobs:
   click-and-check:
     docker:
@@ -17,14 +20,6 @@ jobs:
             sudo pip install pytest
       - run:
           command: python tests/test_selenium.py
-  deploy:
-    docker:
-      - image: circleci/python:3.6.4
-    steps:
-      - checkout
-      - run:
-          command: echo "Hello world"
-            
 
 workflows:
   click-and-check-workflow:
@@ -36,6 +31,6 @@ workflows:
             type: approval
             requires:
                 - click-and-check
-      - deploy:
-            requires:
-                - hold
+      - heroku/deploy-via-git:
+          requires:
+            - hold
