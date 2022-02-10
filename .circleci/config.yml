@@ -23,7 +23,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: echo "Hello world""
+          command: echo "Hello world"
             
 
 workflows:
