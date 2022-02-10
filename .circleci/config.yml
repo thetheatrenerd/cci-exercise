@@ -21,12 +21,9 @@ jobs:
     docker:
       - image: circleci/python:3.6.4
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - 
       - checkout
       - run:
-          command: |
+          command: echo "Hello world""
             
 
 workflows:
