@@ -23,11 +23,11 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "SHA256:i63uYyUJEKnKvrjsbfJilufwrvji1zecAldw1QNzKQY jennicaprice@gmail.com"
+            - 
       - checkout
       - run:
           command: |
-            ssh -o StrictHostKeyChecking=no ubuntu@ec2-3-21-58-106.us-east-2.compute.amazonaws.com "./deploy.sh"
+            
 
 workflows:
   click-and-check-workflow:
@@ -35,6 +35,8 @@ workflows:
       - click-and-check:
             context:
                 - "Secret Things"
+      - hold:
+            type: approval
       - deploy:
             requires:
                 - click-and-check
