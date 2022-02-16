@@ -33,3 +33,10 @@ def dummy_test_2():
 
     assert num1 == num2
 
+
+def dummy_test_3():
+    num1 = 2
+    num2 = 3
+
+    assert num1 + num2 == num2 + num1
+
