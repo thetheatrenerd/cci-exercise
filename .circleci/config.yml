@@ -19,7 +19,7 @@ jobs:
             pip install requests
             pip install pytest
       - run:
-          command: pytest tests/
+          command: python tests/
 
 workflows:
   click-and-check-workflow:
