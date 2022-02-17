@@ -15,6 +15,7 @@ jobs:
           command: |
             pip install pipenv
             pipenv install
+            pipenv shell
             pip install selenium
             pip install requests
             pip install pytest
