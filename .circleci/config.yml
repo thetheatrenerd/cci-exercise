@@ -13,12 +13,11 @@ jobs:
       - run: mkdir test-reports
       - run:
           command: |
-            pip install pipenv
+            sudo pip install pipenv
             pipenv install
-            pipenv shell
-            pip install selenium
-            pip install requests
-            pip install pytest
+            sudo pip install selenium
+            sudo pip install requests
+            sudo pip install pytest
       - run:
           command: python tests/test_selenium.py
 
