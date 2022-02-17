@@ -6,7 +6,7 @@ orbs:
 jobs:
   click-and-check:
     docker:
-      - image: circleci/python:3.6.4
+      - image: cimg/python:3.10.2
     steps:
       - checkout
       - run: echo $THE_PASSWORD
