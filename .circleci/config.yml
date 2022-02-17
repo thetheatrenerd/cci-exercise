@@ -19,7 +19,7 @@ jobs:
             sudo pip install requests
             sudo pip install pytest
       - run:
-          command: python tests/test_selenium.py
+          command: pytest tests/
 
 workflows:
   click-and-check-workflow:
