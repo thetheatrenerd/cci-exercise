@@ -18,6 +18,7 @@ jobs:
             pip install selenium
             pip install requests
             pip install pytest
+            pip install webdriver-manager
       - run:
           command: pytest tests/
 
