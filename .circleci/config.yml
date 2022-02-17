@@ -19,6 +19,8 @@ jobs:
             pip install requests
             pip install pytest
             pip install webdriver-manager
+            apt-get update
+            apt install chromium-chromedriver
       - run:
           command: pytest tests/
 
