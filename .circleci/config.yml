@@ -6,7 +6,7 @@ orbs:
 jobs:
   click-and-check:
     docker:
-      - image: cimg/python:3.10.2-browsers
+      - image: circleci/python:3.6.4
     steps:
       - checkout
       - run: echo $THE_PASSWORD
@@ -19,7 +19,7 @@ jobs:
             pip install requests
             pip install pytest
       - run:
-          command: python tests/
+          command: python tests/test_selenium.py
 
 workflows:
   click-and-check-workflow:
