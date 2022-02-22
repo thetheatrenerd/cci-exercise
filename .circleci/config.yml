@@ -21,6 +21,10 @@ jobs:
             pip install pytest
       - run:
           command: python tests/*
+      - store_test_results:
+          path: test-results
+      - store_artifacts:
+          path: test-results
 
 workflows:
   click-and-check-workflow:
