@@ -19,6 +19,7 @@ jobs:
             pip install selenium
             pip install requests
             pip install pytest
+            mkdir -p test-results
       - run:
           command: python tests/*
       - store_test_results:
